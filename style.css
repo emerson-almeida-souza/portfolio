@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7C3AED;
+    --escuro: #0f172A; 
+    --maisEscuro: #0a0f10;
+    --claro: #ECF0F1;
+    --vidro: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.9);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background: rgb(218, 215, 215);
+    transition: width 0.2s ease;
+}
+
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.profile {
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+    animation: float 5s ease-in-out infinite;
+}
+
+.header {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 2px;
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+.about {
+    padding: 6rem 2rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+}
+
+.about-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.about-description {
+    font-size: 1rem;
+}
+
+.projects {
+    padding: 6rem 2rem;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.projects-card:hover {
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.project-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-description {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.3rem;
+    font-size: 0.8rem;
+}
+
+.project-texts {
+    padding: 1.5rem;
+}
+
+.project-subtitle {
+    text-align: start;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    margin-bottom: 5px;
+}
+
+.contact {
+    padding: 6rem 2rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-input{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--vidro);
+    border-radius: 8px;
+    color: var(--claro);
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.text-message {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--vidro);
+    border-radius: 8px;
+    color: var(--claro);
+    outline: none;
+}
+
+.submit-button {
+    color: var(--claro);
+    background: var(--secundaria);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.submit-button:hover {
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3; /* Reduzi a opacidade para um efeito mais suave */
+    background: 
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, var(--primaria) 0%, transparent 50%), 
+        var(--maisEscuro);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}

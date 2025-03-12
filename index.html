@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerson Almeida Souza | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="particles"></div>
+    <nav class="navigation">
+        <ul class="menu">
+            <li><a href="#home" class="menu-link">Início</a></li>
+            <li><a href="#about" class="menu-link">Sobre</a></li>
+            <li><a href="#projects" class="menu-link">Projetos</a></li>
+            <li><a href="#contact" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="home" class="header">
+        <img src="./assets/profile.jpg" alt="Foto de Emerson Almeida Souza" class="profile">
+        <h1>Emerson Almeida Souza</h1>
+        <p class="header-subtitle">Desenvolvedor de Software</p>
+        <a href="curriculo.pdf" download>Baixe meu currículo</a>
+    </main>
+
+    <section id="about" class="about">
+        <h2 class="about-title">Sobre mim</h2>
+        <div class="about-container">
+            <p class="about-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text since the 1500s, when an unknown printer took a galley of type and
+                scrambled
+                it to make a type specimen book.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="projects-title">Meus Projetos</h2>
+        <div class="projects-container">
+            <div class="projects-card">
+                <img src="./assets/project.jpg" alt="Imagem do projeto Todo" class="project-img">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">Todo</h3>
+                    <p class="project-description">Uma aplicação simples e eficiente para organizar suas tarefas.</p>
+                    <a href="#">Código fonte do projeto</a>
+                </div>
+
+            </div>
+            <div class="projects-card">
+                <img src="./assets/project.jpg" alt="Imagem do projeto TiLGPD" class="project-img">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">TiLGPD</h3>
+                    <p class="project-description">
+                        Meu primeiro projeto web, desenvolvido para o meu TCC: uma ferramenta para auxiliar equipes de
+                        TI na
+                        adequação
+                        à LGPD com padrões ISO 27001.
+                    </p>
+                    <a href="#">Código fonte do projeto</a>
+                </div>
+            </div>
+            <div class="projects-card">
+                <img src="./assets/project.jpg" alt="Imagem do projeto My YT" class="project-img">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">My YT</h3>
+                    <p class="project-description">Sistema para organizar e categorizar seus vídeos favoritos do
+                        YouTube.
+                    </p>
+                    <a href="#">Código fonte do projeto</a>
+                </div>
+            </div>
+            <div class="projects-card">
+                <img src="./assets/project.jpg" alt="Imagem do projeto Notes" class="project-img">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">Notes</h3>
+                    <p class="project-description">Uma ferramenta simples de notas, estilo post-it, para organizar suas
+                        ideias rapidamente.</p>
+                    <a href="#">Código fonte do projeto</a>
+                </div>
+
+            </div>
+            <div class="projects-card">
+                <img src="./assets/project.jpg" alt="Imagem do projeto FavChamps" class="project-img">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">FavChamps</h3>
+                    <p class="project-description">Uma ferramenta para organizar meus campeões favoritos no jogo League
+                        of
+                        Legends.</p>
+                    <a href="#">Código fonte do projeto</a>
+                </div>
+            </div>
+            <div class="projects-card">
+                <img src="./assets/project.jpg" alt="Imagem do projeto EllenLandingPage" class="project-img">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">Landing page para Ellen Grous</h3>
+                    <p class="project-description">Uma landing page para exibir os projetos de geoprocessamento da Ellen
+                        Grous.</p>
+                    <a href="#">Código fonte do projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="contact-title">Entre em contato</h2>
+        <form class="contact-form" id="contact-form" onsubmit="sendWhatsApp(event)">
+            <div class="input-group">
+                <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome" required>
+            </div>
+            <div class="input-group">
+                <textarea id="message" name="message" class="text-message" placeholder="Digite uma mensagem" rows="4"
+                    required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar WhatsApp</button>
+        </form>
+    </section>
+    <script>
+        function sendWhatsApp(event) {
+            event.preventDefault()
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const phone = '5519998278650';
+
+            const text = `Olá me chamo ${name}, ${message}`;
+
+            const formattedMessage = encodeURIComponent(text)
+
+            const url = `https://whatsa.me/${phone}/?t=${formattedMessage}`
+
+            window.open(url, '_blank')
+        }
+
+    </script>
+</body>
+
+</html>
