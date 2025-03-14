@@ -4,51 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de Emerson Almeida Souza, desenvolvedor de software">
+    <meta name="keywords" content="desenvolvedor, software, portfolio, front-end, back-end, javascript, python, html e css, web, api">
     <title>Emerson Almeida Souza | Portfólio</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="./assets/profile.jpg" as="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <div class="particles"></div>
-    <nav class="navigation">
-        <ul class="menu">
+    
+    <nav class="navigation" aria-label="Menu principal">
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="main-menu">
             <li><a href="#home" class="menu-link">Início</a></li>
             <li><a href="#about" class="menu-link">Sobre</a></li>
-            <li><a href="#projects" class="menu-link">Projetos</a></li>
+            <li><a href="#enterprise-projects" class="menu-link">Projetos Corporativos</a></li>
+            <li><a href="#projects" class="menu-link">Projetos Pessoais</a></li>
             <li><a href="#contact" class="menu-link">Contato</a></li>
+            <li><button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button></li>
         </ul>
     </nav>
 
-    <main id="home" class="header">
+    <header id="home" class="header">
         <img src="./assets/profile.jpg" alt="Foto de Emerson Almeida Souza" class="profile">
         <h1>Emerson Almeida Souza</h1>
         <p class="header-subtitle">Desenvolvedor de Software</p>
-        <a href="curriculo.pdf" download>Baixe meu currículo</a>
-    </main>
+        <a href="assets/Emerson Almeida Souza DEV.pdf" download class="download-btn" aria-label="Baixar currículo">Baixe meu currículo</a>
+    </header>
 
     <section id="about" class="about">
         <h2 class="about-title">Sobre mim</h2>
         <div class="about-container">
             <p class="about-description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text since the 1500s, when an unknown printer took a galley of type and
-                scrambled
-                it to make a type specimen book.
+                Sou proficiente em <b>Python</b> e <b>Flask</b> no <b></b>backend combinados com <b>TypeScript</b> e <b>React</b> para desenvolvimento <b>frontend</b>. Possuo experiência sólida em bancos de dados relacionais tais como <b>PostgreSQL</b>, <b>MySQL</b> e <b>Oracle</b>, além de utilizar serviços <b>AWS (EC2, Lambda, ECS, RDS)</b> para implementação de soluções em <b>nuvem</b>. Tenho conhecimento em containers <b>Docker</b> para desenvolvimento, implementação e orquestração de aplicações. Atualmente estou <b></b>estudando metodologias de <b> testes unitários e integração</b>para garantir a qualidade do código e robustez das aplicações. Também estou aprendendo <b>inglês</b> para atuar em projetos internacionais e expandir minhas oportunidades profissionais.
             </p>
         </div>
     </section>
 
+    <section id="enterprise-projects" class="projects">
+        <h2 class="projects-title">Projetos Corporativos</h2>
+        <div class="projects-container">
+            <div class="projects-card">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">Automação para coleta de logs em roteadores</h3>
+                    <p class="project-description">
+                        Participei ativamente no desenvolvimento de uma ferramenta em <b>Python</b>, utilizando as bibliotecas <b>Openpyxl</b>, Netmiko e PySimpleGUI, com o objetivo de automatizar a execução de comandos em roteadores para coleta de logs. Os dados coletados são processados e estruturados em um arquivo <b>Excel</b>, facilitando análises e a extração de informações críticas. A solução reduziu significativamente o tempo gasto em tarefas manuais de coleta.
+                    </p>
+                </div>
+            </div>
+            <div class="projects-card">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">Automação para geração de topologia de rede</h3>
+                    <p class="project-description">
+                        Criei uma ferramenta em <b>Python</b> com as bibliotecas <b>Netmiko, PySimpleGUI e python-pptx</b> para identificar roteadores conectados diretamente ao roteador de origem. A aplicação gera automaticamente uma apresentação <b>PowerPoint</b> com o diagrama da topologia de rede, promovendo maior clareza no mapeamento e na visualização de conexões. Essa automação aumentou a eficiência no levantamento de topologias e reduziu erros manuais.
+                    </p>
+                </div>
+            </div>
+            <div class="projects-card">
+                <div class="project-texts">
+                    <h3 class="project-subtitle">Portal Web para controle de acesso a instalações físicas de roteadores</h3>
+                    <p class="project-description">
+                        Participação e manutenção de um portal web com <b>backend em Python</b> utilizando os frameworks <b>Flask e SQLAlchemy</b>. O <b>frontend</b> foi implementado com <b>TypeScript e React</b>, garantindo uma interface moderna, interativa e responsiva. A aplicação utiliza um banco de dados <b></b>PostgreSQL e foi implementada em infraestrutura de containers <b>Docker</b>, hospedada na <b>AWS</b>. A solução permite o gerenciamento e controle de visitas a instalações físicas de roteadores, incluindo o registro de visitantes e geração de relatórios. O projeto modernizou o processo de controle de acesso, garantindo maior organização, escalabilidade e segurança.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="projects">
-        <h2 class="projects-title">Meus Projetos</h2>
+        <h2 class="projects-title">Projetos Pessoais</h2>
         <div class="projects-container">
             <div class="projects-card">
                 <img src="./assets/project.jpg" alt="Imagem do projeto Todo" class="project-img">
                 <div class="project-texts">
                     <h3 class="project-subtitle">Todo</h3>
                     <p class="project-description">Uma aplicação simples e eficiente para organizar suas tarefas.</p>
-                    <a href="#">Código fonte do projeto</a>
+                    <a href="https://github.com/seu-usuario/todo" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Ver código fonte
+                    </a>
                 </div>
-
             </div>
             <div class="projects-card">
                 <img src="./assets/project.jpg" alt="Imagem do projeto TiLGPD" class="project-img">
@@ -56,11 +95,11 @@
                     <h3 class="project-subtitle">TiLGPD</h3>
                     <p class="project-description">
                         Meu primeiro projeto web, desenvolvido para o meu TCC: uma ferramenta para auxiliar equipes de
-                        TI na
-                        adequação
-                        à LGPD com padrões ISO 27001.
+                        TI na adequação à LGPD com padrões ISO 27001.
                     </p>
-                    <a href="#">Código fonte do projeto</a>
+                    <a href="https://github.com/seu-usuario/tilgpd" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Ver código fonte
+                    </a>
                 </div>
             </div>
             <div class="projects-card">
@@ -70,7 +109,9 @@
                     <p class="project-description">Sistema para organizar e categorizar seus vídeos favoritos do
                         YouTube.
                     </p>
-                    <a href="#">Código fonte do projeto</a>
+                    <a href="https://github.com/seu-usuario/myyt" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Ver código fonte
+                    </a>
                 </div>
             </div>
             <div class="projects-card">
@@ -79,18 +120,20 @@
                     <h3 class="project-subtitle">Notes</h3>
                     <p class="project-description">Uma ferramenta simples de notas, estilo post-it, para organizar suas
                         ideias rapidamente.</p>
-                    <a href="#">Código fonte do projeto</a>
+                    <a href="https://github.com/seu-usuario/notes" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Ver código fonte
+                    </a>
                 </div>
-
             </div>
             <div class="projects-card">
                 <img src="./assets/project.jpg" alt="Imagem do projeto FavChamps" class="project-img">
                 <div class="project-texts">
                     <h3 class="project-subtitle">FavChamps</h3>
                     <p class="project-description">Uma ferramenta para organizar meus campeões favoritos no jogo League
-                        of
-                        Legends.</p>
-                    <a href="#">Código fonte do projeto</a>
+                        of Legends.</p>
+                    <a href="https://github.com/seu-usuario/favchamps" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Ver código fonte
+                    </a>
                 </div>
             </div>
             <div class="projects-card">
@@ -99,7 +142,9 @@
                     <h3 class="project-subtitle">Landing page para Ellen Grous</h3>
                     <p class="project-description">Uma landing page para exibir os projetos de geoprocessamento da Ellen
                         Grous.</p>
-                    <a href="#">Código fonte do projeto</a>
+                    <a href="https://github.com/seu-usuario/ellengrous" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Ver código fonte
+                    </a>
                 </div>
             </div>
         </div>
@@ -107,34 +152,38 @@
 
     <section id="contact" class="contact">
         <h2 class="contact-title">Entre em contato</h2>
-        <form class="contact-form" id="contact-form" onsubmit="sendWhatsApp(event)">
+        <form class="contact-form" id="contact-form">
             <div class="input-group">
+                <label for="name" class="form-label">Seu nome</label>
                 <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome" required>
             </div>
             <div class="input-group">
+                <label for="message" class="form-label">Mensagem</label>
                 <textarea id="message" name="message" class="text-message" placeholder="Digite uma mensagem" rows="4"
-                    required></textarea>
+                    required maxlength="500"></textarea>
+                <small class="char-counter"><span id="char-count">0</span>/500 caracteres</small>
             </div>
-            <button type="submit" class="submit-button">Enviar WhatsApp</button>
+            <button type="submit" class="submit-button">
+                <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+            </button>
         </form>
     </section>
-    <script>
-        function sendWhatsApp(event) {
-            event.preventDefault()
-            const name = document.getElementById('name').value;
-            const message = document.getElementById('message').value;
-            const phone = '5519998278650';
 
-            const text = `Olá me chamo ${name}, ${message}`;
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2025 Emerson Almeida Souza. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-            const formattedMessage = encodeURIComponent(text)
-
-            const url = `https://whatsa.me/${phone}/?t=${formattedMessage}`
-
-            window.open(url, '_blank')
-        }
-
-    </script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
