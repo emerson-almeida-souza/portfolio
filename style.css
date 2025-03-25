@@ -276,7 +276,7 @@ h1 {
 }
 
 .about-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: var(--texto-principal);
 }
@@ -306,7 +306,7 @@ h1 {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -337,7 +337,25 @@ h1 {
     max-height: 400px;
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 16/9;
+}
+
+.stacks-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.stacks-container img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+.stacks-container p {
+    font-size: 1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 0.5rem;
+    margin-right: 10px;
+    font-weight: bold;
 }
 
 .project-texts {
